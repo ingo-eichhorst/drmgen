@@ -1,5 +1,7 @@
 # DRM Encryption Key Generator (drmgen)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e37a1ba496b4472794d9d5ecec3aba70)](https://app.codacy.com/app/ingo-eichhorst/drmgen?utm_source=github.com&utm_medium=referral&utm_content=ingo-eichhorst/drmgen&utm_campaign=badger)
+
 ![license](https://img.shields.io/badge/license-MIT-green.svg) ![coverage](https://img.shields.io/badge/coverage-100%25-green.svg)
 
 The "drmgen" tool can be used to generate a set of keys to encrypt media files. The keys will beprovided in multiple formats. Every key consists of a "key id" a "key value" and (this is needed for HLS encryption) a "initialization vector". It is possible that the Involved Systems work with different endianess. Therefore the output is provided in little and big endian order.
