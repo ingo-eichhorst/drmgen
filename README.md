@@ -28,7 +28,7 @@ To hook drmgen up to your awesome Javascipt/node.js project use the following
 
 ```JavaScript
 const drm = require('drmgen')
-console.log(drm.gen())
+console.log(drm.generateFullSet())
 ```
 
 ## swap/ flip - little and big endianess
