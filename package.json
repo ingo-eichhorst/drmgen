@@ -1,0 +1,30 @@
+{
+  "name": "drmgen",
+  "version": "0.1.0",
+  "description": "Generating unique keys/seeds in different formats taking little and big endian into concideration",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage ."
+  },
+  "keywords": [
+    "key",
+    "seed",
+    "drm",
+    "encryption"
+  ],
+  "author": "Ingo Eichhorst <git@ingo-eichhorst.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^22.1.4"
+  },
+  "dependencies": {
+    "commander": "2.14.1",
+    "uuid": "3.2.1"
+  }
+}
