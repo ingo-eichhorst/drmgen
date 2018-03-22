@@ -35,3 +35,13 @@ jobs:
         
       # run tests!
       - run: yarn test
+
+      - run: yarn add --dev jest-junit
+      - run:
+          name: Jest Suite
+          command: yarn jest tests --ci --testResultsProcessor="jest-junit"
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+      - store_test_results:
+          path: /test-results
+
