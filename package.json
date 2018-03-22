@@ -1,6 +1,6 @@
 {
   "name": "drmgen",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Generating unique keys/seeds in different formats taking little and big endian into concideration",
   "main": "index.js",
   "scripts": {
