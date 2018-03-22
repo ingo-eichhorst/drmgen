@@ -4,7 +4,8 @@
   "description": "Generating unique keys/seeds in different formats taking little and big endian into concideration",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage ."
+    "test": "jest --coverage .",
+    "lint": "eslint ."
   },
   "keywords": [
     "key",
