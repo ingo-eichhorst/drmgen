@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage .",
+    "test-ci": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint ."
   },
   "keywords": [
@@ -20,6 +21,7 @@
   "repository": "https://github.com/ingo-eichhorst/drmgen",
   "license": "MIT",
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "eslint": "^4.16.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.8.0",
