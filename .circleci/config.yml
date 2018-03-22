@@ -29,12 +29,12 @@ jobs:
           environment:
             JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
           command: yarn test -- --ci --testResultsProcessor="jest-junit"
+          post:
+            - coveralls
+
       - store_test_results:
           path: reports/junit
       - store_artifacts:
           path: reports/junit
-      - test:
-          post:
-            - coveralls
 
 
