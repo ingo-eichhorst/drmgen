@@ -1,6 +1,7 @@
 # DRM Encryption Key Generator (drmgen)
 
-![license](https://img.shields.io/badge/license-MIT-green.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e37a1ba496b4472794d9d5ecec3aba70)](https://app.codacy.com/app/ingo-eichhorst/drmgen?utm_source=github.com&utm_medium=referral&utm_content=ingo-eichhorst/drmgen&utm_campaign=badger) [![CircleCI](https://circleci.com/gh/ingo-eichhorst/drmgen.svg?style=shield)](https://circleci.com/gh/ingo-eichhorst/drmgen) [![Coverage Status](https://coveralls.io/repos/github/ingo-eichhorst/drmgen/badge.svg)](https://coveralls.io/github/ingo-eichhorst/drmgen)
+![license](https://img.shields.io/badge/license-MIT-green.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e37a1ba496b4472794d9d5ecec3aba70)](https://app.codacy.com/app/ingo-eichhorst/drmgen?utm_source=github.com&utm_medium=referral&utm_content=ingo-eichhorst/drmgen&utm_campaign=badger) [![CircleCI](https://circleci.com/gh/ingo-eichhorst/drmgen.svg?style=shield)](https://circleci.com/gh/ingo-eichhorst/drmgen) [![Coverage Status](https://coveralls.io/repos/github/ingo-eichhorst/drmgen/badge.svg)](https://coveralls.io/github/ingo-eichhorst/drmgen) [![Known Vulnerabilities](https://snyk.io/test/github/ingo-eichhorst/drmgen/badge.svg)](https://snyk.io/test/github/ingo-eichhorst/drmgen)
+
 
 The "drmgen" tool can be used to generate a set of keys to encrypt media files. The keys will beprovided in multiple formats. Every key consists of a "key id" a "key value" and (this is needed for HLS encryption) a "initialization vector". It is possible that the Involved Systems work with different endianess. Therefore the output is provided in little and big endian order.
 
