@@ -1,0 +1,4 @@
+{
+  "collectCoverageFrom": ["lib/**/*.js"],
+  "collectCoverage": true
+}
