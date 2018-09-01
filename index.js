@@ -137,7 +137,7 @@ function restructureKeySet (keySet, swap, ids, encoding) {
  * @param {object} keySet - drmgen keySet object
  * @returns {string} output - output to the console
  */
-function formatKeySet (format, keySet) {
+function formatKeySet (keySet, format) {
   let output = ''
   if (format === 'multiline' || format === 'oneline') {
     for (let entry in keySet) {
