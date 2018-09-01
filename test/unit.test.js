@@ -1,14 +1,20 @@
-
 const lib = require('../lib')
 
 describe('generate keys', () => {
-
   test('generate a complete set of keys', () => {
     const set = lib.generateFullSet()
-    expect(set.id.uuid).toMatch(/[a-f0-9]{8}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{12}/)
-    expect(set.idFlipped.uuid).toMatch(/[a-f0-9]{8}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{12}/)
-    expect(set.key.uuid).toMatch(/[a-f0-9]{8}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{12}/)
-    expect(set.keyFlipped.uuid).toMatch(/[a-f0-9]{8}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{12}/)
+    expect(set.id.uuid).toMatch(
+      /[a-f0-9]{8}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{12}/
+    )
+    expect(set.idFlipped.uuid).toMatch(
+      /[a-f0-9]{8}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{12}/
+    )
+    expect(set.key.uuid).toMatch(
+      /[a-f0-9]{8}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{12}/
+    )
+    expect(set.keyFlipped.uuid).toMatch(
+      /[a-f0-9]{8}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{4}-?[a-f0-9]{12}/
+    )
 
     expect(set.id.hex).toMatch(/[a-f0-9]{32}/)
     expect(set.idFlipped.hex).toMatch(/[a-f0-9]{32}/)
@@ -25,15 +31,17 @@ describe('generate keys', () => {
   })
 
   test('result on wrong uuidToBase64() input', () => {
-    expect(lib.uuidToBase64('123')).toBe("")
+    expect(lib.uuidToBase64('123')).toBe('')
   })
 
   test('result on wrong convertUuid() input', () => {
     try {
-      lib.convertUuid('123','bas64')
+      lib.convertUuid('123', 'bas64')
     } catch (e) {
-      expect(e.message).toBe('Provided uuid 123 is not valid. See: RFC4122 for details.')
-    } 
+      expect(e.message).toBe(
+        'Provided uuid 123 is not valid. See: RFC4122 for details.'
+      )
+    }
   })
 
   test('convertUuid() to uuid', () => {
@@ -55,4 +63,21 @@ describe('generate keys', () => {
     expect(lib.swapId(hex)).toBe('13f8abf3f1de4d7aa723bbf82ffebc91')
   })
 
+  test('check that no id exists twice', () => {
+    function generateNestedValueList (object) {
+      let list = []
+      function listNestedValues (object) {
+        for (let prop in object) {
+          if (typeof object[prop] === 'object' && object[prop] !== null) {
+            listNestedValues(object[prop])
+          } else list.push(object[prop])
+        }
+      }
+      listNestedValues(object)
+      return list
+    }
+
+    const list = generateNestedValueList(lib.generateFullSet())
+    expect(new Set(list).size).toBe(list.length)
+  })
 })
