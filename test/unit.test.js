@@ -63,7 +63,7 @@ describe('generate keys', () => {
     expect(lib.swapId(hex)).toBe('13f8abf3f1de4d7aa723bbf82ffebc91')
   })
 
-  test.only('check that no id exists twice', () => {
+  test('check that no id exists twice', () => {
     function generateNestedValueList (object) {
       let list = []
       function listNestedValues (object) {
