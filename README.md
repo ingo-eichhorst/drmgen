@@ -1,6 +1,7 @@
 # DRM Encryption Key Generator (drmgen)
 
 ![license](https://img.shields.io/badge/license-MIT-green.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e37a1ba496b4472794d9d5ecec3aba70)](https://app.codacy.com/app/ingo-eichhorst/drmgen?utm_source=github.com&utm_medium=referral&utm_content=ingo-eichhorst/drmgen&utm_campaign=badger) [![Maintainability](https://api.codeclimate.com/v1/badges/a1af5e7b3a2e15a07f90/maintainability)](https://codeclimate.com/github/ingo-eichhorst/drmgen/maintainability) [![CircleCI](https://circleci.com/gh/ingo-eichhorst/drmgen.svg?style=shield)](https://circleci.com/gh/ingo-eichhorst/drmgen) [![Coverage Status](https://coveralls.io/repos/github/ingo-eichhorst/drmgen/badge.svg)](https://coveralls.io/github/ingo-eichhorst/drmgen) [![Known Vulnerabilities](https://snyk.io/test/github/ingo-eichhorst/drmgen/badge.svg)](https://snyk.io/test/github/ingo-eichhorst/drmgen)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fingo-eichhorst%2Fdrmgen.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fingo-eichhorst%2Fdrmgen?ref=badge_shield)
 
 The "drmgen" tool can be used to generate a set of keys to encrypt media files. The keys will beprovided in multiple formats. Every key consists of a "key id" a "key value" and (this is needed for HLS encryption) a "initialization vector". It is possible that the Involved Systems work with different endianess. Therefore the output is provided in little and big endian order.
 
@@ -59,3 +60,7 @@ This effact can also happen to the initalisation vector or the key id.
 ```bash
 drmgen -f multiline -s -e "uuid,base64" -i "id,key"
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fingo-eichhorst%2Fdrmgen.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fingo-eichhorst%2Fdrmgen?ref=badge_large)
